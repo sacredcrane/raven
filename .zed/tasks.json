@@ -1,0 +1,48 @@
+[
+  {
+    "label": "CMake: Configure dev",
+    "command": "cmake",
+    "args": [
+      "--preset",
+      "dev"
+    ],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "save": "all",
+    "reveal": "always",
+    "hide": "on_success"
+  },
+
+  {
+    "label": "CMake: Build dev",
+    "command": "cmake",
+    "args": [
+      "--build",
+      "--preset",
+      "dev"
+    ],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "save": "all",
+    "reveal": "always",
+    "hide": "on_success"
+  },
+
+  {
+    "label": "CTest: Run",
+    "command": "ctest",
+    "args": [
+      "--preset",
+      "dev"
+    ],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "save": "all",
+    "reveal": "always"
+  },
+
+  {
+    "label": "Raven: Run generator",
+    "command": "$ZED_WORKTREE_ROOT/build/dev/apps/raven/generator/raven_generator",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "save": "all",
+    "reveal": "always"
+  }
+]

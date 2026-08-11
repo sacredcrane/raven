@@ -1,0 +1,23 @@
+[
+  {
+    "label": "Debug Raven generator",
+    "adapter": "CodeLLDB",
+    "request": "launch",
+
+    "program": "$ZED_WORKTREE_ROOT/build/dev/apps/raven/generator/raven_generator",
+    "cwd": "$ZED_WORKTREE_ROOT",
+
+    "build": "CMake: Build dev"
+  },
+
+  {
+    "label": "Debug Raven tests",
+    "adapter": "CodeLLDB",
+    "request": "launch",
+
+    "program": "$ZED_WORKTREE_ROOT/build/dev/tests/raven_tests",
+    "cwd": "$ZED_WORKTREE_ROOT",
+
+    "build": "CMake: Build dev"
+  }
+]

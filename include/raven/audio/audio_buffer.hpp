@@ -1,0 +1,4 @@
+#ifndef AUDIO_AUDIO_BUFFER_HPP
+#define AUDIO_AUDIO_BUFFER_HPP
+
+#endif
