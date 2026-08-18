@@ -20,17 +20,12 @@ target_compile_features(
 target_compile_options(
     raven_project_options
     INTERFACE
-        $<$<CXX_COMPILER_ID:Clang>:
-            -Wall
-            -Wextra
-            -Wpedantic
-            -Wshadow
-        >
+        $<$<CXX_COMPILER_ID:Clang,GNU>:-Wall;-Wextra;-Wpedantic;-Wshadow>
+        $<$<CXX_COMPILER_ID:Clang>:-stdlib=libc++>
+)
 
-        $<$<CXX_COMPILER_ID:GNU>:
-            -Wall
-            -Wextra
-            -Wpedantic
-            -Wshadow
-        >
+target_link_options(
+    raven_project_options
+    INTERFACE
+        $<$<CXX_COMPILER_ID:Clang>:-stdlib=libc++>
 )
